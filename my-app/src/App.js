@@ -6,6 +6,7 @@ import { Users } from './components/Users'
 import { DisplayBoard } from './components/DisplayBoard'
 import CreateUser from './components/CreateUser'
 import { getAllUsers, createUser } from './services/UserService'
+import Tabs from "./components/Tabs"; 
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
           <Header></Header>
           <div className="container mrgnbtm">
             <div className="row">
-              <div className="col-md-8">
+              {/* <div className="col-md-4">
                   <CreateUser 
                     user={user}
                     onChangeForm={onChangeForm}
@@ -61,7 +62,7 @@ function App() {
                     getAllUsers={fetchAllUsers}
                     >
                   </CreateUser>
-              </div>
+              </div> */}
               <div className="col-md-4">
                   <DisplayBoard
                     numberOfUsers={numberOfUsers}
@@ -69,6 +70,29 @@ function App() {
                   >
                   </DisplayBoard>
               </div>
+              {/* CUSTOME FOR TAB VIEW */}
+                    <div className="col-md-8">
+                        <Tabs> 
+                            <div label="Search By IFSC"> 
+                              <CreateUser 
+                                user={user}
+                                onChangeForm={onChangeForm}
+                                createUser={userCreate}
+                                getAllUsers={fetchAllUsers}
+                                >
+                              </CreateUser>
+                            </div> 
+                            <div label="Search By Bank Name"> 
+                              <CreateUser 
+                                  user={user}
+                                  onChangeForm={onChangeForm}
+                                  createUser={userCreate}
+                                  getAllUsers={fetchAllUsers}
+                                  >
+                                </CreateUser>
+                            </div> 
+                          </Tabs> 
+                      </div>
             </div>
           </div>
           <div className="row mrgnbtm">

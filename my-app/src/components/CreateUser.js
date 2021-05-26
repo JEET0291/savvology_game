@@ -22,8 +22,8 @@ const CreateUser = ({onChangeForm, createUser, getAllUsers }) => {
                     </div> */}
                     <div className="row">
                         <div className="form-group col-md-12">
-                            <label htmlFor="exampleInputEmail1">Search By IFSC Or Bank Name</label>
-                            <input type="text" onChange={(e) => onChangeForm(e)} className="form-control" name="searchKey" id="ifsc" aria-describedby="emailHelp" placeholder="IFSC Or Bank Name" />
+                            <label htmlFor="exampleInputEmail1">Search</label>
+                            <input type="text" onChange={(e) => onChangeForm(e)} className="form-control" name="searchKey" id="ifsc" aria-describedby="emailHelp" placeholder="Enter Search Key" />
                         </div>
                     </div>
                     <button type="button" onClick= {(e) => getAllUsers()} className="btn btn-danger">Submit</button>
